@@ -8,8 +8,7 @@ IRrecv irrecv(RECV_PIN);
 
 decode_results results;
 
-void setup()
-{
+void setup() {
   Serial.begin(115200);
   irrecv.enableIRIn(); // Start the receiver
   pinMode(RELAY_PIN, OUTPUT);
@@ -17,7 +16,6 @@ void setup()
 }
 
 void loop() {
-    
   if (irrecv.decode(&results)) {
     Serial.println(results.value, DEC);
     if ((results.value) == 16753245) {
@@ -70,8 +68,6 @@ void loop() {
     case 16728765:
       Serial.println("b"); // vlc back 3 seconds
   }
-
   irrecv.resume(); // Receive the next value
   }
-  
 }
