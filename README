@@ -1,1 +1,3 @@
+I use this code to remote control Quod Libet and VLC through the command line by using an infrared remote. The relay control in the Arduino code is for cutting power to the amplifiers, monitor and "mood light".
+
 The project uses the IR library found at http://www.arcfn.com/2009/08/multi-protocol-infrared-remote-library.html
