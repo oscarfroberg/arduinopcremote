@@ -38,6 +38,7 @@ class Arduino() :
         if self.ser in inp :
           line = self.ser.readline().strip()
           print "Arduino:", line
+  
   if line == "M":
     os.system('quodlibet --play-pause')
     os.system('echo -n  "pause" | nc -U /home/media/vlc.sock')
